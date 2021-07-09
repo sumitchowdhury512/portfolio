@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
       initialRoute: 'Home',
       routes: {
         '/projects': (context) => projectpage(),
-        // '/second': (context) => Aboutmain(),
       },
       home: Homescreen()
     );
