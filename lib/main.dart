@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/contraints.dart';
-
+import 'package:portfolio/projectpage.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'home_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  setPathUrlStrategy();
+  runApp(
+      MyApp()
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +30,11 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: bodytextcolor)
         ),
       ),
+      initialRoute: 'Home',
+      routes: {
+        '/projects': (context) => projectpage(),
+        // '/second': (context) => Aboutmain(),
+      },
       home: Homescreen()
     );
   }

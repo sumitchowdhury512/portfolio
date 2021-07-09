@@ -234,8 +234,7 @@ class Homescreen extends StatelessWidget {
                                         children: [
                                           ElevatedButton(
                                             onPressed: (){
-                                              Navigator.push(context, MaterialPageRoute(builder: (context) => projectpage()),
-                                              );
+                                              Navigator.pushNamed(context, '/projects');
                                             },
                                             style: TextButton.styleFrom(
                                               padding: EdgeInsets.symmetric(
